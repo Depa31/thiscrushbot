@@ -35,7 +35,7 @@ mode=input('Commenti o like?(c/l): ')
 if mode=='c':
     nom=input('Nome(anche a caso tanto non si vede): ')
     mess=input('Messaggio: ')
-threads=2000
+threads=int(input('Threads: '))
 proxy = open('proxies.txt', 'r').read().split('\n')
 for x in range(0,threads):
     t = threading.Thread(target=main, args=(mode),)
